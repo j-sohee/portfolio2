@@ -136,7 +136,7 @@ var main = function(){
                     trigger: section,
                     start:"30% top",
                     end:"50% top",
-                    markers:true,
+                    // markers:true,
                     scrub:1,
                 },
                 opacity:0
