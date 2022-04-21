@@ -1,0 +1,32 @@
+@mixin elip($line){
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @if ($line > 1 ){
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical;
+    }@else{
+        white-space: nowrap;
+    }
+}
+
+@mixin position($top, $left, $x, $y){
+    position: absolute;
+    top:$top; left:$left;
+    transform: translate($x, $y);
+}
+
+@mixin clear{
+    &:after{
+        content:''; display:block; clear:both;
+    }
+}
+
+@mixin noScrollBar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+}

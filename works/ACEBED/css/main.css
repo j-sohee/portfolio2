@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR:wght@400;500&family=Titillium+Web:wght@200&display=swap");
+@import url("./reset.css");
+@import url("./common.css");
+.sc_visual { width: 100%; position: relative; }
+
+.sc_visual .visual_bg { width: 100%; }
+
+.sc_visual .wrap { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; z-index: 5; }
+
+.sc_visual .main_txt { width: 100%; max-width: 1200px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); color: #fff; text-align: center; }
+
+.sc_visual .main_txt span { display: block; padding-bottom: 5px; font-size: 26px; line-height: 1.4; }
+
+.sc_visual .main_txt h2 { font-size: 90px; font-weight: 200; line-height: 1; font-family: "Titillium Web", "Noto Sans", sans-serif; }
+
+.sc_visual .controls { position: absolute; top: 50%; left: auto; -webkit-transform: translate(0, -80%); transform: translate(0, -80%); z-index: 10; right: 90px; }
+
+.sc_visual .controls .btn_wrap .btn { display: none; margin-top: 12px; }
+
+.sc_visual .controls .btn_wrap .btn i { font-size: 12px; color: #efefef; }
+
+.sc_visual .controls .btn_wrap .btn.on { display: block; }
+
+.sc_visual .swiper-pagination { position: relative; bottom: auto; left: auto; height: 75px; }
+
+.sc_visual .swiper-pagination .swiper-pagination-bullet { display: block; margin: 15px auto; background: #fff; }
+
+.sc_visual .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active { height: 30px; border-radius: 4px; background: #fff; }
+
+.sc_visual .scroll_btn { position: absolute; top: 0; left: 0; width: 100%; height: 100vh; }
+
+.sc_visual .scroll_btn .down_btn { position: absolute; width: 80px; height: 80px; border: 1px solid #fff; background: none; bottom: 30px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); z-index: 10; }
+
+.sc_visual .scroll_btn .down_btn i { font-size: 24px; color: #fff; }
+
+.brand { width: 100%; }
+
+.brand .wrapper { max-width: 1723px; margin: 0 auto; position: relative; z-index: 1; }
+
+.brand .inner { max-width: 1200px; margin: 0 auto; }
+
+.brand .cont { display: table; position: relative; }
+
+.brand .cont .img_wrap { display: table-cell; width: 680px; }
+
+.brand .cont .img_wrap video { width: 100%; height: 800px; -o-object-fit: cover; object-fit: cover; }
+
+.brand .cont .img_wrap > .vid { width: 580px; }
+
+.brand .cont .txt_wrap { display: table-cell; width: 485px; vertical-align: middle; }
+
+.brand .cont .txt_wrap h2 { display: block; padding-bottom: 64px; font-family: "Titillium Web", "Noto Sans", sans-serif; margin-left: -2px; font-size: 40px; font-weight: 300; color: #222; }
+
+.brand .cont .txt_wrap em { font-family: "Noto Sans KR", sans-serif; font-size: 20px; line-height: 1; font-weight: 600; letter-spacing: -0.025em; color: #222; }
+
+.brand .cont .txt_wrap h3 { padding: 9px 0 5px; margin-left: -5px; font-family: "Titillium Web", "Noto Sans", sans-serif; font-size: 56px; font-weight: 200; line-height: 1.25; letter-spacing: -0.025em; color: #222; }
+
+.brand .cont .txt_wrap p { font-size: 16px; line-height: 1.75; color: #666; }
+
+.brand .cont .txt_wrap .link_more { display: block; width: 180px; padding: 21px 29px; border: 1px solid #222; font: 600 16px/1 "Titillium Web", "Noto Sans", sans-serif; color: #222; text-align: center; margin-top: 34px; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.brand .cont .txt_wrap .link_more:hover { background: #0890c0; border: 1px solid #0890c0; color: #fff; }
+
+.brand .ethanol_area { margin-top: -87px; }
+
+.brand .chemistry_area { position: inherit; }
+
+.brand .chemistry_area .bg { width: 952px; height: 1325px; position: absolute; right: 0; bottom: -152px; background: url("https://www.acebed.com/common/images/sub-vis-tech-bg1.jpg") no-repeat center bottom; background-position: -500px -20px; background-size: cover; z-index: -1; }
+
+.brand .chemistry_area > .txt_wrap em, .brand .chemistry_area .txt_wrap h3, .brand .chemistry_area .txt_wrap p, .brand .chemistry_area .link_more { color: #fff; }
+
+.brand .chemistry_area > .txt_wrap > .link_more { color: #fff; border-color: #fff; }
+
+.color { width: 100%; }
+
+.color .wrap { max-width: 1723px; margin: -50px auto 0; padding: 245px 0 194px; position: relative; background: #000 url("https://www.acebed.com/common/images/sub-vis-spring-bg1.jpg") no-repeat center center; background-size: cover; }
+
+.color .inner { max-width: 1200px; margin: 0 auto; z-index: 2; }
+
+.color .inner .txt_wrap { display: table-cell; vertical-align: middle; }
+
+.color .inner .txt_wrap em { font-size: 24px; line-height: 1; color: #fff; }
+
+.color .inner .txt_wrap h3 { padding: 9px 0 5px; margin-left: -5px; font-family: "Titillium Web", "Noto Sans", sans-serif; font-size: 70px; font-weight: 200; line-height: 1.25; color: #fff; }
+
+.color .inner .txt_wrap p { font-size: 16px; line-height: 1.75; color: #fff; }
+
+.color .inner .txt_wrap .link_more { display: block; width: 180px; padding: 21px 29px; border: 1px solid #fff; font: 600 16px/1 "Titillium Web", "Noto Sans", sans-serif; color: #fff; text-align: center; margin-top: 34px; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.color .inner .txt_wrap .link_more:hover { background: #0890c0; border: 1px solid #0890c0; color: #fff; }
+
+.sc_intro { padding: 105px 0 120px; }
+
+.sc_intro .inner { max-width: 1200px; margin: 0 auto; position: relative; }
+
+.sc_intro .list_box { width: 100%; }
+
+.sc_intro .list_box ul { width: 100%; }
+
+.sc_intro .list_box ul:after { content: ''; display: block; clear: both; }
+
+.sc_intro .list_box ul li { width: 33.3%; float: left; padding: 0 12px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.sc_intro .list_box ul li:first-child { padding-left: 0; }
+
+.sc_intro .pic { width: 100%; height: 360px; }
+
+.sc_intro .pic img { display: block; width: 100%; height: 360px; -o-object-fit: cover; object-fit: cover; }
+
+.sc_intro .txt { width: 100%; padding-top: 31px; }
+
+.sc_intro .txt h4 { font: 24px/1.65 "Noto Sans KR", sans-serif; color: #222; }
+
+.sc_intro .txt p { padding-top: 13px; font: 16px/1.75 "Noto Sans KR", sans-serif; color: #666; }
+
+.sc_intro .view { display: inline-block; min-width: 180px; margin-top: 24px; padding: 21.5px 29px; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 15px; border: 1px solid #222; position: relative; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.sc_intro .view span { color: #222; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.sc_intro .view i { font-size: 18px; color: #333; position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); right: 20px; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.sc_intro .view:hover { background: #0890c0; border: 1px solid #0890c0; }
+
+.sc_intro .view:hover span { color: #fff; }
+
+.sc_intro .view:hover i { color: #fff; }
+
+.sc_about { max-width: 1723px; margin: 0 auto; padding: 105px 0 320px; background: #f8f8f8; }
+
+.sc_about .inner { max-width: 1200px; margin: 0 auto; position: relative; }
+
+.sc_about ul { width: 100%; display: table; }
+
+.sc_about ul li { display: table-cell; width: 33.3%; text-align: center; vertical-align: top; padding: 0 20px; border-right: 1px solid #dfdfdf; }
+
+.sc_about ul li:first-child { padding-left: 0; }
+
+.sc_about ul li:last-child { border: none; }
+
+.sc_about svg { max-width: 100%; height: 72px; vertical-align: middle; }
+
+.sc_about .txt { padding-top: 34px; }
+
+.sc_about .txt h3 { font: 18px/1 "Noto Sans KR", sans-serif; color: #222; }
+
+.sc_about .txt p { padding-top: 18px; font: 16px/1.75 "Noto Sans KR", sans-serif; color: #666; }
+
+.sc_info { width: 100%; padding: 0; margin-top: -188px; }
+
+.sc_info .inner { max-width: 1200px; margin: 0 auto; position: relative; }
+
+.sc_info .wrap { width: 100%; height: 729px; }
+
+.sc_info .wrap:after { content: ''; display: block; clear: both; }
+
+.sc_info .wrap .recruit { width: 50%; height: 100%; float: left; position: relative; background: #e7e7e5; }
+
+.sc_info .wrap .recruit > .recruit_table { display: table; width: 100%; height: 46%; position: absolute; bottom: 0; left: 0; background: rgba(255, 255, 255, 0.9); z-index: 1; }
+
+.sc_info .wrap .recruit > .recruit_table > .recruit_cell { display: table-cell; width: 100%; padding: 30px 102px; vertical-align: middle; }
+
+.sc_info .wrap .recruit > .recruit_table > .recruit_cell > h2 { font: 55px/1.25 "Titillium Web", "Noto Sans", sans-serif; color: #222; }
+
+.sc_info .wrap .recruit > .recruit_table > .recruit_cell > b { display: block; font: 26px/1 "Noto Sans KR", sans-serif; color: #333; }
+
+.sc_info .wrap .recruit > .recruit_table > .recruit_cell > .data:hover .info_btns { border-color: #0890c0; background: #0890c0; }
+
+.sc_info .wrap .recruit > .recruit_table > .recruit_cell > .data:hover .info_btns::after { color: #fff; }
+
+.sc_info .wrap .recruit > .recruit_table > .recruit_cell > .data p { font: 16px/1.5 "Noto Sans KR", sans-serif; color: #333; margin-top: 16px; overflow: hidden; }
+
+.sc_info .wrap .recruit > .recruit_table > .recruit_cell > .data .info_btns { display: block; width: 35px; height: 35px; margin-top: 20px; font-size: 0; border: 1px solid #aaa; border-radius: 50%; position: relative; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.sc_info .wrap .recruit > .recruit_table > .recruit_cell > .data .info_btns::after { display: block; content: '\f054'; font-family: "Font Awesome 5 Free"; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 14px; font-weight: 900; line-height: 1; color: #bbb; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.sc_info .wrap .bg { display: block; width: 100%; height: 400px; position: absolute; top: 0; right: 0; background: url("https://acebed.com/common/images/m-SHO-003-01-thum1.jpg") no-repeat center center; background-size: cover; }
+
+.sc_info .corporate { width: 50%; height: 100%; float: left; position: relative; background: #8bab69 url("https://acebed.com/common/images/sub-vis-sho-bg01.jpg") no-repeat center center; background-size: cover; }
+
+.sc_info .corporate > .link_wrap { display: table; width: 100%; height: 100%; padding: 10px 15px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.sc_info .corporate > .link_wrap > .wrap { display: table-cell; width: 100%; height: 100%; vertical-align: middle; text-align: center; border: 1px solid rgba(255, 255, 255, 0.3); }
+
+.sc_info .corporate > .link_wrap > .wrap > .info_btns { display: block; margin: 0 auto; width: 35px; height: 35px; font-size: 0; border: 1px solid #fff; border-radius: 50%; -webkit-transition: 0.5s; transition: 0.5s; position: relative; }
+
+.sc_info .corporate > .link_wrap > .wrap > .info_btns::after { display: block; content: '\f054'; font-family: "Font Awesome 5 Free"; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 14px; font-weight: 900; line-height: 1; color: #fff; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.sc_info .corporate > .link_wrap > .wrap > .info_btns:hover { border-color: #0890c0; background: #0890c0; }
+
+.sc_info .corporate span { display: block; font: 16px/1.75 "Noto Sans KR", sans-serif; color: #fff; }
+
+.sc_info .corporate h2 { font: 55px/1.25 "Titillium Web", "Noto Sans", sans-serif; color: #fff; padding: 10px 0 14px; }
+
+.notice { width: 100%; padding: 105px 0 120px; }
+
+.notice .inner { max-width: 1200px; margin: 0 auto; position: relative; }
+
+.notice .list { display: table; width: 100%; table-layout: fixed; border-bottom: 1px solid #ddd; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.notice .list:hover { border-color: #1c9ad6; }
+
+.notice .list:hover .time .day, .notice .list:hover .time .date, .notice .list:hover .info_btns i { color: #1c9ad6; }
+
+.notice .list .time { display: table-cell; width: 10%; text-align: center; vertical-align: middle; }
+
+.notice .list .time .day { display: block; padding-right: 2px; font-family: "Titillium Web", "Noto Sans", sans-serif; font-size: 48px; letter-spacing: -0.01em; font-weight: 400; line-height: 1; color: #ddd; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.notice .list .time .date { display: block; padding-top: 4px; font-family: "Titillium Web", "Noto Sans", sans-serif; font-size: 18px; letter-spacing: 0.1em; font-weight: 400; line-height: 1; color: #ddd; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.notice .list .content { display: table-cell; width: auto; padding: 34px 24px 36px; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: hidden; }
+
+.notice .list .content .tit { margin-bottom: 9px; overflow: hidden; white-space: nowrap; }
+
+.notice .list .content .tit em { display: inline-block; vertical-align: middle; width: auto; height: 29px; padding: 0 17px; margin-right: 16px; font-size: 15px; line-height: 29px; text-align: center; letter-spacing: -0.025em; color: #1c9ad6; border: 1px solid #1c9ad6; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.notice .list .content .tit strong { display: inline-block; vertical-align: middle; font-size: 20px; font-weight: 600; line-height: 1.5; }
+
+.notice .list .content p { display: block; font: 16px "Noto Sans KR", sans-serif; color: #666; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; }
+
+.notice .list .info_btns { display: table-cell; width: 60px; text-align: center; vertical-align: middle; }
+
+.notice .list .info_btns i { font-size: 25px; color: #999; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.notice .more { padding-top: 40px; text-align: center; }
+
+.notice .more a { display: inline-block; padding: 21.5px 29px; font: 15px/1 "Noto Sans", sans-serif; color: #222; border: 1px solid #222; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.notice .more a:hover { color: #fff; background: #0890c0; border-color: #0890c0; }
+
+.notice { width: 100%; padding: 120px 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.notice .inner { max-width: 1200px; margin: 0 auto; position: relative; }
+
+.notice .inner:after { content: ''; display: block; clear: both; }
+
+.notice article { width: 50%; height: 88px; float: left; }
+
+.notice article h2 { display: block; padding-bottom: 20px; font: 18px/1 "Noto Sans KR", sans-serif; color: #333; }
+
+.notice .stock { padding-right: 34px; border-right: 1px solid #ddd; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.notice .stock ul { width: 100%; height: 58px; }
+
+.notice .stock ul:after { content: ''; display: block; clear: both; }
+
+.notice .stock ul li { float: left; }
+
+.notice .stock ul li:first-child { width: 40%; }
+
+.notice .stock ul li:first-child > em { font: 45px/1 "Titillium Web", "Noto Sans", sans-serif; color: #ff1282; }
+
+.notice .stock ul li:last-child { width: 60%; margin-top: -6px; text-align: right; }
+
+.notice .stock ul li:last-child .time { display: block; width: 100%; margin-bottom: 12px; text-align: right; font: 12px/1 "Noto Sans KR", sans-serif; color: #aaa; }
+
+.notice .stock ul li:last-child i { display: inline-block; padding-right: 15px; margin-top: -2px; vertical-align: middle; font-size: 20px; color: #ff1282; }
+
+.notice .stock ul li:last-child span { font: 17px/1 "Noto Sans KR", sans-serif; color: #888; }
+
+.notice .ir { padding-left: 34px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.notice .ir ul { height: 58px; }
+
+.notice .ir ul li { display: block; height: 29px; }
+
+.notice .ir ul li a { display: block; padding-right: 95px; position: relative; line-height: 29px; }
+
+.notice .ir ul li a p { font: 16px/1 "Noto Sans KR", sans-serif; color: #666; }
+
+.notice .ir ul li a span { position: absolute; top: 0; right: 0; font: 15px/1 "Noto Sans KR", sans-serif; color: #666; }
+
+.banner { width: 100%; }
+
+.banner .inner { width: 100%; height: 324px; overflow: hidden; }
+
+.banner .inner:after { content: ''; display: block; clear: both; }
+
+.banner .inner .office { width: 50%; height: 324px; float: left; -webkit-transition: 0.5s; transition: 0.5s; overflow: hidden; }
+
+.banner .inner .office:hover .of_bg { -webkit-transform: scale(1.05); transform: scale(1.05); }
+
+.banner .inner .of_bg { background: url("https://acebed.com/common/images/sub-vis-exp-bg01.jpg") no-repeat center bottom; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.banner .inner .factory { width: 50%; height: 324px; float: left; }
+
+.banner .inner .factory:hover .fa_bg { -webkit-transform: scale(1.05); transform: scale(1.05); }
+
+.banner .inner .fa_bg { background: url("https://acebed.com/common/images/sub-vis-exp-bg02.jpg") no-repeat center center; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.banner .inner a { display: block; width: 100%; height: 100%; position: relative; overflow: hidden; }
+
+.banner .inner a .bg { width: 100%; height: 100%; position: absolute; top: 0; lefT: 0; background-size: cover; }
+
+.banner .inner a .txt { display: table; width: 100%; height: 100%; position: relative; }
+
+.banner .inner a .table { display: table-cell; width: 100%; vertical-align: middle; text-align: center; z-index: 2; }
+
+.banner .inner a span { display: block; font: 15px/1 "Noto Sans", sans-serif; color: #fff; }
+
+.banner .inner a b { display: block; padding-top: 7px; font: 300 30px/1.25 "Titillium Web", "Noto Sans", sans-serif; color: #fff; }

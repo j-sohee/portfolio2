@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Prosto+One&family=Roboto:wght@300;400;500&display=swap");
+@import url("./reset.css");
+@import url("./common.css");
+body { font-family: 'Roboto', 'sans-serif'; font-weight: 400; font-size: 17px; line-height: 1.2em; color: #fff; }
+
+body { min-width: 1400px; }
+
+.header { width: 100%; }
+
+.header .inner { width: 100%; position: fixed; left: 0; top: 20px; padding: 0 30px; -webkit-box-sizing: border-box; box-sizing: border-box; z-index: 10; }
+
+.header .logo a { display: block; width: 100%; }
+
+.header .logo .logo_img { display: inline-block; width: 100px; height: 23px; background: url("https://www.kia.com/content/dam/kwcms/kr/ko/images/common/logo_w.png") center center no-repeat; }
+
+.header .btnCall { position: absolute; top: 50%; right: 30px; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 50px; height: 20px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.header .btnCall.on::before { top: 50%; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.header .btnCall.on::after { bottom: 50%; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+.header .btnCall.on span { opacity: 0; }
+
+.header .btnCall > span { display: block; width: 100%; height: 1px; background: #ddd; position: absolute; top: 50%; left: 0; text-indent: -99999px; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.header .btnCall::before { content: ''; display: block; width: 100%; height: 1px; background: #ddd; position: absolute; top: 0; left: 0; -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: 0.5s; transition: 0.5s; }
+
+.header .btnCall::after { content: ''; display: block; width: 100%; height: 1px; background: #ddd; position: absolute; bottom: 0; left: 0; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.header .menu { width: 100%; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 0 30px; -webkit-box-sizing: border-box; box-sizing: border-box; position: fixed; margin: 0 auto; top: -100%; left: 0; background-color: #0a222e; z-index: 9; opacity: 0; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.header .menu.on { top: 0; opacity: 1; }
+
+.header .menu .wrap { width: 100%; max-width: 480px; margin: 0 auto; position: relative; padding: 40px 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.header .menu .main_menu li a { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 10px; color: #fff; position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.header .menu .main_menu li span { display: block; position: absolute; top: 0; right: 100%; padding-top: 1.5em; padding-right: 10px; font-size: 13px; line-height: 10px; letter-spacing: 1.6px; opacity: .4; }
+
+.header .menu .main_menu li strong { display: block; position: relative; font-size: 40px; line-height: 38px; letter-spacing: -.01579em; font-weight: 400; margin-bottom: 0.52em; }
+
+.header .menu .sub_menu > li a { display: inline-block; font-size: 20px; padding: 10px; color: #fff; line-height: 22px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; letter-spacing: 1.6px; }
+
+.footer .pre_footer { background-color: #0a222e; position: relative; z-index: 11; }
+
+.footer .pre_footer .inner { width: 100%; padding-left: 4.16667%; padding-right: 4.16667%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.footer .pre_footer .inner .top_wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 40px 0 30px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.3); position: relative; }
+
+.footer .pre_footer .inner .left { width: 50%; padding-right: 5.55556%; }
+
+.footer .pre_footer .inner .left p { font-family: "Orbitron", sans-serif; font-size: 26px; letter-spacing: -.01429em; font-weight: 400; }
+
+.footer .pre_footer .inner .right { padding-left: 5.55556%; width: 50%; }
+
+.footer .pre_footer .inner .right fieldset { width: 100%; }
+
+.footer .pre_footer .inner .right form { width: 100%; max-width: 480px; display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; margin-left: auto; }
+
+.footer .pre_footer .inner .right label { display: block; font-family: "Orbitron", sans-serif; font-size: 13px; line-height: 15px; letter-spacing: 1.6px; margin-bottom: 10px; }
+
+.footer .pre_footer .inner .right input[type=email] { display: inline-block; width: 66%; min-height: 50px; border: none; border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding: 10px 20px 10px 0; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "Orbitron", sans-serif; font-size: 15px; line-height: 1.15; color: #fff; background-color: transparent; }
+
+.footer .pre_footer .inner .right button { display: inline-block; width: 30%; min-height: 50px; border: none; background-color: transparent; border-top: 1px solid rgba(255, 255, 255, 0.3); border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding: 10px 30px; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "Orbitron", sans-serif; font-size: 13px; line-height: 15px; letter-spacing: 1.6; color: #fff; }
+
+.footer .pre_footer .inner .wrap { width: 100%; padding-left: 12.5%; padding-right: 12.5%; }
+
+.footer .ori_footer { width: 100%; padding: 60px 0; background-color: #0a222e; position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; z-index: 11; }
+
+.footer .ori_footer .inner { width: 100%; padding-left: 4.16667%; padding-right: 4.16667%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.footer .ori_footer .logo { padding-left: 12.5%; padding-right: 12.5%; text-align: center; }
+
+.footer .ori_footer .logo a { display: block; width: 100%; }
+
+.footer .ori_footer .logo .logo_img { display: inline-block; width: 100px; height: 23px; background: url("https://www.kia.com/content/dam/kwcms/kr/ko/images/common/logo_w.png") center center no-repeat; }
+
+.footer .ori_footer .footer_menu { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; padding-top: 50px; padding-bottom: 40px; }
+
+.footer .ori_footer .footer_menu a { padding: 0 20px; }
+
+.footer .ori_footer .footer_menu a span { font-family: "Orbitron", sans-serif; font-size: 13px; line-height: 15px; letter-spacing: 1.6px; }
+
+.footer .ori_footer .footer_menu a i { font-size: 12px; }
+
+.footer .ori_footer .bottom { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin-top: 100px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.footer .ori_footer .bottom h3 { font-family: "Orbitron", sans-serif; letter-spacing: .142857px; font-size: 16px; line-height: 22px; }
+
+.footer .ori_footer .bottom .left { width: 40.90909%; padding-right: 4.54545%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.footer .ori_footer .bottom .left .info { display: inline-block; padding-top: 20px; margin-right: 10px; }
+
+.footer .ori_footer .bottom .left .info span { display: block; font-size: 14px; line-height: 22px; letter-spacing: .4px; }
+
+.footer .ori_footer .bottom .center { width: 27.27273%; }
+
+.footer .ori_footer .bottom .center .sns { padding-top: 20px; max-width: 300px; }
+
+.footer .ori_footer .bottom .center a { display: inline-block; padding-right: 20px; letter-spacing: .142857px; font-size: 18px; line-height: 22px; }
+
+.footer .ori_footer .bottom .right { width: 31.81818%; padding-left: 4.54545%; }
+
+.footer .ori_footer .bottom .right .util { padding-top: 20px; }
+
+.footer .ori_footer .bottom .right .util a { font-size: 14px; line-height: 21px; letter-spacing: .4px; padding-right: 20px; }

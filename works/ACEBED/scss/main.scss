@@ -1,0 +1,745 @@
+@import './_mixin.scss';
+@import './_variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR:wght@400;500&family=Titillium+Web:wght@200&display=swap');
+@import url('./reset.css');
+@import url('./common.css');
+
+.sc_visual{
+    width:100%; position:relative;
+    .visual_bg{
+        width:100%;
+    }
+    .wrap{
+        width:100%; height:100vh;
+        position:absolute; top:0; left:0; z-index:5;
+        
+    }
+    .main_txt{
+        width:100%; 
+        max-width:1200px;
+        @include position(50%, 50%, -50%, -50%);
+        color:#fff;
+        text-align: center;
+
+        span{
+            display:block;
+            padding-bottom: 5px;
+            font-size:26px;
+            line-height: 1.4;
+        }
+        h2{
+            font-size:90px;
+            font-weight: 200;
+            line-height: 1;
+            font-family: $en;
+        }
+        
+    }
+    .controls{
+        @include position(50%, auto, 0, -80%);
+        z-index:10; right:90px;
+        .btn_wrap{
+            .btn{
+                display: none;
+                margin-top:12px;
+                i{
+                    font-size:12px;
+                    color:#efefef;
+                }
+                &.on{ display:block; }
+            }
+        }
+    }
+    .swiper-pagination{
+        position:relative;
+        bottom:auto;
+        left:auto;
+        height:75px;
+        .swiper-pagination-bullet{
+            display:block;
+            margin:15px auto;
+            background:#fff;
+            &.swiper-pagination-bullet-active{
+                height:30px;
+                border-radius: 4px;
+                background:#fff;
+            }
+        }
+    }
+    
+    .scroll_btn{
+        position:absolute; top:0; left:0;
+        width:100%; height:100vh;
+        .down_btn{
+            position:absolute;
+            width:80px; height:80px;
+            border:1px solid #fff;
+            background:none;
+            bottom:30px; left:50%;
+            transform: translateX(-50%);
+            z-index:10;
+            i{
+                font-size:24px;
+                color:#fff;
+            }
+        }
+    }
+    
+}
+.brand{
+    width:100%;
+    .wrapper{
+        max-width:1723px;
+        margin:0 auto;
+        position:relative;
+        z-index:1;
+    }
+    .inner{
+        max-width:1200px;
+        margin:0 auto;
+    }
+    .cont{
+        display:table; position:relative;
+        .img_wrap{
+            display:table-cell;
+            width:680px;
+            video{ width:100%; height:800px; object-fit: cover;}
+            &>.vid{
+                width:580px;
+            }
+        }
+        .txt_wrap{
+            display:table-cell;
+            width:485px;
+            vertical-align: middle;
+            h2{
+                display: block;
+                padding-bottom: 64px;
+                font-family: $en;
+                margin-left: -2px;
+                font-size: 40px;
+                font-weight: 300;
+                color: #222;
+            }
+            em{
+                font-family: $kor;
+                font-size: 20px;
+                line-height: 1;
+                font-weight: 600;
+                letter-spacing: -0.025em;
+                color: #222;
+            }
+            h3{
+                padding: 9px 0 5px;
+                margin-left: -5px;
+                font-family: $en;
+                font-size: 56px;
+                font-weight: 200;
+                line-height: 1.25;
+                letter-spacing: -0.025em;
+                color: #222;
+            }
+            p{
+                font-size: 16px;
+                line-height: 1.75;
+                color: #666;
+            }
+            .link_more{
+                display:block;
+                width:180px; padding:21px 29px;
+                border:1px solid #222;
+                font:600 16px/1 $en; color:#222;
+                text-align:center;
+                margin-top:34px;
+                box-sizing: border-box;
+                transition:0.5s;
+                &:hover{
+                    background:#0890c0;
+                    border:1px solid #0890c0;
+                    color:#fff;
+                }
+            }
+        }
+        
+    }
+    .ethanol_area{
+        margin-top:-87px;
+    }
+    .chemistry_area{
+        position:inherit;
+        .bg{
+            width:952px; height:1325px;
+            position:absolute; right:0; bottom:-152px;
+            background: url('https://www.acebed.com/common/images/sub-vis-tech-bg1.jpg') no-repeat center bottom;
+            background-position: -500px -20px;
+            background-size: cover;
+            z-index:-1;
+        }
+        &>.txt_wrap em,.txt_wrap h3,.txt_wrap p, .link_more{
+            color:#fff;
+        }
+        &>.txt_wrap>.link_more{
+            color:#fff;
+            border-color:#fff;
+        }
+       
+    }
+}
+.color{
+    width:100%;
+    .wrap{
+        max-width:1723px;
+        margin: -50px auto 0;
+        padding: 245px 0 194px;
+        position: relative;
+        background: #000 url('https://www.acebed.com/common/images/sub-vis-spring-bg1.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .inner{
+        max-width:1200px;
+        margin:0 auto;
+        z-index:2;
+        .txt_wrap{
+            display:table-cell;
+            vertical-align: middle;
+            em{
+                font-size: 24px;
+                line-height: 1;
+                color:#fff;
+            }
+            h3{
+                padding: 9px 0 5px;
+                margin-left: -5px;
+                font-family: $en;
+                font-size: 70px;
+                font-weight: 200;
+                line-height: 1.25;
+                color: #fff;
+            }
+            p{
+                font-size: 16px;
+                line-height: 1.75;
+                color: #fff;
+            }
+            .link_more{
+                display:block;
+                width:180px; padding:21px 29px;
+                border:1px solid #fff;
+                font:600 16px/1 $en; color:#fff;
+                text-align:center;
+                margin-top:34px;
+                box-sizing: border-box;
+                transition:0.5s;
+                &:hover{
+                    background:#0890c0;
+                    border:1px solid #0890c0;
+                    color:#fff;
+                }
+            }
+        }
+    }
+}
+.sc_intro{
+    padding: 105px 0 120px;
+    .inner{
+        max-width:1200px; margin:0 auto;
+        position:relative;
+    }
+    .list_box{
+        width:100%;
+        ul{
+            width:100%;
+            @include clear;
+            li{
+                width:33.3%;
+                float:left; padding:0 12px;
+                box-sizing: border-box;
+                &:first-child{
+                    padding-left:0;
+                }
+            }
+        }
+    }
+    .pic{
+        width:100%; height:360px;
+        img{
+            display:block;
+            width:100%; height:360px; object-fit: cover;
+        }
+    }
+    .txt{
+        width:100%; padding-top:31px;
+        h4{
+            font:24px/1.65 $kor; color:#222;
+        }
+        p{
+            padding-top:13px;
+            font:16px/1.75 $kor; color:#666;
+        }
+    }
+    .view{
+        display:inline-block;
+        min-width:180px;
+        margin-top:24px;
+        padding:21.5px 29px;
+        box-sizing: border-box;
+        font-size:15px;
+        border:1px solid #222;
+        position:relative;
+        transition:0.5s;
+        span{ color:#222; transition:0.5s; }
+        i{
+            font-size:18px;
+            color:#333;
+            position:absolute;
+            top:50%; transform:translateY(-50%);
+            right:20px;
+            transition:0.5s;
+        }
+        &:hover{
+            background:#0890c0;
+            border:1px solid #0890c0;
+            span{color:#fff;}
+            i{ color:#fff; }
+        }
+    }
+}
+.sc_about{
+    max-width: 1723px; margin:0 auto;
+    padding:105px 0 320px;
+    background:#f8f8f8;
+    .inner{
+        max-width:1200px; margin:0 auto;
+        position:relative;
+    }
+    ul{
+        width:100%;
+        display:table;
+        li{
+            display:table-cell;
+            width:33.3%; text-align:center;
+            vertical-align: top;
+            padding:0 20px;
+            border-right: 1px solid #dfdfdf;
+            &:first-child{ padding-left:0; }
+            &:last-child{ border:none; }
+        }
+    }
+    svg{
+        max-width:100%;
+        height:72px;
+        vertical-align: middle;
+    }
+    .txt{
+        padding-top:34px;
+        h3{
+            font:18px/1 $kor; color:#222;
+        }
+        p{
+            padding-top:18px;
+            font:16px/1.75 $kor; color:#666;
+        }
+    }
+}
+.sc_info{
+    width:100%; padding:0;
+    margin-top:-188px;
+    .inner{
+        max-width:1200px; margin:0 auto;
+        position:relative;
+    }
+    .wrap{
+        width:100%; height:729px;
+        @include clear;
+        .recruit{
+            width:50%; height:100%; float:left;
+            position:relative; background:#e7e7e5;
+
+            &>.recruit_table{
+                display:table;
+                width:100%; height:46%;
+                position:absolute; bottom:0; left:0;
+                background:rgba(255,255,255,0.9);
+                z-index:1;
+                &>.recruit_cell{
+                    display:table-cell;
+                    width:100%; padding:30px 102px;
+                    vertical-align: middle;
+                    &>h2{
+                        font:55px/1.25 $en; color:#222;
+                    }
+                    &>b{
+                        display:block;
+                        font:26px/1 $kor; color:#333;
+                    }
+                    &>.data{
+
+                        &:hover{
+                            .info_btns{
+                                border-color:#0890c0;
+                                background:#0890c0;
+                                &::after{ color:#fff; }
+                            }
+                        }
+                        p{
+                            font:16px/1.5 $kor; color:#333;
+                            margin-top:16px;
+                            overflow: hidden;
+                        }
+                        .info_btns{
+                            display: block;
+                            width: 35px;
+                            height: 35px;
+                            margin-top:20px;
+                            font-size: 0;
+                            border: 1px solid #aaa;
+                            border-radius: 50%;
+                            position:relative;
+                            transition: 0.5s;
+                            &::after{
+                                display: block;
+                                content: '\f054';
+                                font-family: "Font Awesome 5 Free";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform:translate(-50%,-50%);
+                                font-size: 14px;
+                                font-weight: 900;
+                                line-height: 1;
+                                color: #bbb;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+            .bg{
+                display: block;
+                width:100%; height:400px;
+                position:absolute; top:0; right:0;
+                background:url('https://acebed.com/common/images/m-SHO-003-01-thum1.jpg') no-repeat center center;
+                background-size:cover;
+            }
+            
+        }
+    .corporate{
+        width:50%; height:100%; float:left;
+        position:relative;
+        background:#8bab69 url('https://acebed.com/common/images/sub-vis-sho-bg01.jpg') no-repeat center center;
+        background-size:cover;
+
+        &>.link_wrap{
+            display: table;
+            width:100%; height: 100%;
+            padding:10px 15px;
+            box-sizing: border-box;
+            &>.wrap{
+                display:table-cell;
+                width:100%; height: 100%;
+                vertical-align: middle;
+                text-align: center;
+                border:1px solid rgba(255, 255, 255, .3);
+                &>.info_btns{
+                    display:block;
+                    margin:0 auto;
+                    width: 35px;
+                    height: 35px;
+                    font-size: 0;
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    transition:0.5s;
+                    position:relative;
+                    &::after{
+                        display: block;
+                        content: '\f054';
+                        font-family: "Font Awesome 5 Free";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform:translate(-50%,-50%);
+                        font-size: 14px;
+                        font-weight: 900;
+                        line-height: 1;
+                        color: #fff;
+                        transition:0.5s;
+                    }
+                    &:hover{
+                        border-color:#0890c0;
+                        background:#0890c0;
+                    }
+                }
+            }
+        }
+        span{
+            display:block;
+            font:16px/1.75 $kor; color:#fff;
+        }
+        h2{
+            font:55px/1.25 $en; color:#fff;
+            padding:10px 0 14px;
+        }
+            
+    }
+}
+.notice{
+    width:100%; padding:105px 0 120px;
+    .inner{
+        max-width:1200px; margin:0 auto;
+        position:relative; 
+    }
+    .list{
+        display:table;
+        width:100%; 
+        table-layout: fixed;
+        border-bottom:1px solid #ddd;
+        transition:0.5s;
+        &:hover{
+            border-color:#1c9ad6;
+            .time .day, .time .date, .info_btns i{
+                color:#1c9ad6;
+            }
+        }
+        .time{
+            display:table-cell;
+            width:10%;
+            text-align: center;
+            vertical-align: middle;
+            .day{
+                display: block;
+                padding-right: 2px;
+                font-family: $en;
+                font-size: 48px;
+                letter-spacing: -0.01em;
+                font-weight: 400;
+                line-height: 1;
+                color:#ddd;
+                box-sizing: border-box;
+                transition:0.5s;
+            }
+            .date{
+                display: block;
+                padding-top: 4px;
+                font-family: $en;
+                font-size: 18px;
+                letter-spacing: 0.1em;
+                font-weight: 400;
+                line-height: 1;
+                color: #ddd;
+                box-sizing: border-box;
+                transition:0.5s;
+            }
+        }
+        .content{
+            display:table-cell;
+            width:auto;
+            padding: 34px 24px 36px;
+            box-sizing: border-box;
+            overflow: hidden;
+            .tit{
+                margin-bottom:9px;
+                overflow:hidden;
+                white-space: nowrap;
+                em{
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: auto;
+                    height: 29px;
+                    padding: 0 17px;
+                    margin-right: 16px;
+                    font-size: 15px;
+                    line-height: 29px;
+                    text-align: center;
+                    letter-spacing: -0.025em;
+                    color: #1c9ad6;
+                    border: 1px solid #1c9ad6;
+                    box-sizing: border-box;
+                }
+                strong{
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 1.5;
+                }
+            }
+            p{
+                display:block;
+                font:16px $kor; color:#666;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                word-wrap: normal;
+            }
+        }
+        .info_btns{
+            display:table-cell;
+            width: 60px;
+            text-align: center;
+            vertical-align: middle;
+            i{
+                font-size:25px;
+                color:#999;
+                transition:0.5s;
+            }
+        }
+    }
+    .more{
+        padding-top:40px; text-align:center;
+        a{
+            display:inline-block;
+            padding:21.5px 29px;
+            font:15px/1 $font; color:#222;
+            border:1px solid #222;
+            transition:0.5s;
+            &:hover{
+                color:#fff;
+                background:#0890c0;
+                border-color:#0890c0;
+            }
+        }
+        
+    }
+}
+.notice{
+    width:100%; padding:120px 0;
+    box-sizing: border-box;
+    .inner{
+        max-width: 1200px;  margin:0 auto;
+        position:relative;
+        @include clear;
+    }
+    article{
+        width:50%; height:88px; float:left;
+        h2{
+            display:block;
+            padding-bottom:20px;
+            font: 18px/1 $kor; color:#333;   
+        }
+    }
+    .stock{
+        padding-right:34px;
+        border-right:1px solid #ddd; 
+        box-sizing: border-box;
+        ul{
+            width:100%; height:58px;
+            @include clear;
+            li{
+                float:left;
+                &:first-child{
+                    width:40%;
+                    >em{
+                        font: 45px/1 $en; color:#ff1282;
+                    }
+                }
+                &:last-child{
+                    width:60%; margin-top:-6px;
+                    text-align:right;
+                    .time{
+                        display:block;
+                        width:100%; margin-bottom:12px;
+                        text-align:right;
+                        font:12px/1 $kor; color:#aaa;
+                    }
+                    i{
+                        display:inline-block;
+                        padding-right:15px;
+                        margin-top:-2px;
+                        vertical-align:middle;
+                        font-size:20px;
+                        color:#ff1282;
+                    }
+                    span{
+                        font:17px/1 $kor; color:#888;
+                    }
+                }
+            }
+        }
+    }
+    .ir{
+        padding-left:34px; 
+        box-sizing: border-box;
+        ul{
+            height:58px;
+             li{
+                 display:block; height:29px;
+                 a{
+                     display:block;
+                     padding-right:95px;
+                     position:relative;
+                     line-height:29px;
+                     p{
+                         font:16px/1 $kor; color:#666;
+                     }
+                     span{
+                         position:absolute; top:0; right:0;
+                         font: 15px/1 $kor; color:#666;
+                     }
+                 }
+             }
+        }
+     }
+}
+.banner{
+    width:100%;
+    .inner{
+        width:100%; height:324px; overflow: hidden;
+        @include clear;
+
+        .office{
+            width:50%; height:324px;
+            float:left;
+            transition:0.5s;
+            overflow: hidden;
+            &:hover .of_bg{
+                transform:scale(1.05);
+            }
+        }
+        .of_bg{
+            background: url('https://acebed.com/common/images/sub-vis-exp-bg01.jpg') no-repeat center bottom;
+            transition:0.5s;
+        }
+        .factory{
+            width:50%; height:324px;
+            float:left;
+            &:hover .fa_bg{
+                transform:scale(1.05);
+            }
+        }
+        .fa_bg{
+            background: url('https://acebed.com/common/images/sub-vis-exp-bg02.jpg') no-repeat center center;
+            transition:0.5s;
+        }
+        a{
+            display:block; width:100%; height:100%;
+            position:relative; overflow: hidden;
+            .bg{
+                width:100%; height:100%;
+                position:absolute; top:0; lefT:0;
+                background-size: cover;
+            }
+            .txt{
+                display:table;
+                width:100%; height:100%; position:relative;
+
+            }
+            .table{
+                display:table-cell;
+                width:100%;
+                vertical-align: middle;
+                text-align:center;
+                z-index:2;
+            }
+            span{
+                display:block;
+                font:15px/1 $font; color:#fff;
+            }
+            b{
+                display:block;
+                padding-top:7px; 
+                font:300 30px/1.25 $en; color:#fff;
+            }
+        }
+    }
+}

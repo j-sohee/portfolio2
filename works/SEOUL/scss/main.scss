@@ -1,0 +1,853 @@
+@import './_mixin.scss';
+@import './_variables.scss';
+
+.main{
+    width:1152px; margin:0 auto;
+    .inner{
+        height:350px; overflow: hidden;
+        @include clear;
+    }
+    .slide{
+        width:770px;
+        background:#ccc;
+        height:350px; position:relative;
+        float:left;
+        .cont{
+            position:absolute; top:0; left:80px;
+            height:100%;
+        }
+    }
+    .cont{
+        position:relative;
+    }
+    
+    .cont h3{
+        width:80px; height:50%;
+        background:#d2e1e9;
+        position:absolute; left:-80px;
+        &::after{
+            content: " "; display:block;
+            position: absolute;
+            width: 0; height: 0;
+            z-index: 5;
+            left: 99%; top: 50%;
+            border-style: solid;
+            border-width: 25px 0 25px 32px;
+            border-color: transparent transparent transparent #d2e1e9;
+            margin-top: -25px;
+        }
+        a{
+            display:block;
+            position:relative;
+            width:100%; height:100%;
+            padding-top:50px;
+            color:#222;
+            font-weight: 600;
+            text-align:center;
+            box-sizing: border-box;
+
+            .icon{
+                display:block;
+                width:50px; height:50px;
+                margin:0 auto 10px;
+                background-color:#fff;
+                border-radius: 50%;
+            }
+        }
+        .news{
+            background:url(https://www.seoul.go.kr/res_newseoul/images/main/icon_main_2019.png) no-repeat 0 0;
+        }
+        .citizen{
+            background: url(https://www.seoul.go.kr/res_newseoul/images/main/icon_main_2019.png) no-repeat -50px 0;
+        }
+    }
+    // 개별
+    .cont01 h3{
+        top:0;
+    }
+    .cont02 h3{
+        top:50%;
+    }
+    // 작동
+    .cont.active{
+        z-index:10;
+        h3{
+            background:#0158a8;
+            &::after{border-color:transparent transparent transparent #0158a8;}
+            a{ color:#fff; }
+        }
+        .slidecont{ display:block; }
+    }
+    .slidecont{
+        width:690px; background:#777;
+        height:100%; display:none; 
+        position:relative;
+    }
+    .swiper-wrapper{
+        .swiper-slide{
+            a{
+                display:block;
+                width:100%; height:100%;
+                box-sizing: border-box;
+            }
+            .pic{
+                width:100%; height:100%;
+                img{ width:100%; height:100%; object-fit: cover;}
+            }
+            .txt{
+                position:absolute;
+                left:0; bottom:0;
+                width:100%; height:40px;
+                background-color:rgba(0,0,0,0.7);
+                padding-left:10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                box-sizing: border-box;
+                p{
+                    color:#fff;
+                    line-height:40px;
+                }
+            }
+        }
+       
+    }
+    .swiper-button-prev{
+        width:18px; height:18px;
+        top:auto; left:auto; bottom:50%; right:45px;
+        transform:translateY(50%);
+        background: url('https://www.seoul.go.kr/res_newseoul/images/main/icon_set_common_2019.png');
+        background-position: -241px -285px;
+        background-repeat: no-repeat;
+    }
+    .swiper-button-next{
+        width:18px; height:18px;
+        top:auto; left:auto; bottom:50%; right:5px;
+        transform:translateY(50%);
+        background-image: url('https://www.seoul.go.kr/res_newseoul/images/main/icon_set_common_2019.png');
+        background-repeat: no-repeat;
+        background-position: -256px -285px;
+    }
+    .swiper-button-prev::after,.swiper-button-next::after{
+        display:none; 
+    }
+    .news_control{
+        position:absolute;
+        display:block;
+        right:3px; bottom:4px;
+        width:110px; height:32px;
+        border-radius: 16px;
+        box-sizing: border-box;
+        z-index:5;
+        &::before{
+            content: '';
+            width: 1px; height: 24px;
+            position: absolute;
+            top: 4px; right: 66px;
+            background: rgba(255,255,255,.5);
+        }
+    }
+    .ci_control{
+        position:absolute;
+        display:block;
+        right:3px; bottom:4px;
+        width:110px; height:32px;
+        border-radius: 16px;
+        box-sizing: border-box;
+        z-index:5;
+        &::before{
+            content: '';
+            width: 1px; height: 24px;
+            position: absolute;
+            top: 4px; right: 66px;
+            background: rgba(255,255,255,.5);
+        }
+    }
+    .pagination{
+        position:absolute; display:block;
+        width:auto; top:50%; right:80px; bottom:auto;
+        transform:translateY(-60%);
+        color:#fff;
+        &>span{
+            color:#fff; font-size:13px; letter-spacing: 0;
+        }
+    }
+
+    .btn{
+        width:18px; height:18px;
+        position:absolute; top:50%; right:23px;
+        transform:translateY(-50%); color:#fff;
+        display:none;
+        &.on{
+            display:block;
+        }
+        &.play{
+            background:url('https://www.seoul.go.kr/res_newseoul/images/main/icon_set_common_2019.png') no-repeat -269px -285px;
+        }
+        &.pause{
+            background: url('https://www.seoul.go.kr/res_newseoul/images/main/icon_set_common_2019.png') no-repeat -285px -285px;
+        }
+    }
+
+     
+    
+    .info_banner{
+        width:360px; height:350px; float:right;
+        .covid{
+            position: relative;
+            width: 100%; height: 214px;
+            overflow: hidden;
+            background: url('https://www.seoul.go.kr/res_newseoul/images/main/bg_corona_pc_220330.jpg') no-repeat 0 0;
+        }
+        .corona1{
+            display:block;
+            height:129px;
+            .time{
+                display:block;
+                position:absolute;
+                top:11px; right:20px;
+                min-width:47px;
+                font-size:13px;
+                color:#000;
+                letter-spacing: -0.05em;
+            }
+            .result{
+                display:inline-block;
+                position:absolute;
+                top:100px; left:50%;
+                width:130px; height:26px;
+                min-width:47px;
+                color:#fff;
+                font-size:18px;
+                font-weight: 600;
+                letter-spacing: -0.09em;
+                text-align: center;
+            }
+            .box1{
+                margin-left:-146px;
+            }
+            .box2{
+                margin-left:15px;
+            }
+        }
+        .corona2{
+            display:block;
+            height:85px;
+            .time{
+                display:block;
+                position:absolute;
+                top:137px; right:20px;
+                min-width:47px;
+                font-size:13px;
+                color:#000;
+                letter-spacing: -0.05em;
+            }
+            .box{
+                display:inline-block;
+                width:70px; height:40px;
+                min-width:47px;
+                font-size:18px;
+                font-weight: 600;
+                line-height: 40px;
+                color:#fff;
+                letter-spacing: -0.05em;
+                position:absolute;
+                top:175px; left:50%;
+            }
+            .result1{ margin-left:-150px; }
+            .result2{ margin-left:-65px; }
+            .result3{ margin-left: 15px; }
+            .result4{ margin-left:105px;}
+        }
+        .mayor{
+            position:relative;
+            margin-top:7px;
+            a{ display:block; }
+            .link1{
+                position:absolute; left:20px;
+                bottom:15px;
+                z-index:1;
+            }
+            .link2{
+                position:absolute; left:120px;
+                bottom:15px;
+                z-index:1;
+            }
+        }
+    }
+}
+.service{
+    width:1152px; margin:0 auto;
+    .inner{
+        position:relative; padding:50px 0 0;
+        h2{
+            width:100%;
+            font-size:24px;
+            font-weight: 700;
+            margin-bottom:20px;
+            padding-bottom:10px;
+            border-bottom:1px solid #dbdbdb;
+        }
+        .list{
+            display:table; width:100%;
+            li{
+                display:table-cell;
+                width:auto; height:90px;
+                text-align:center;
+
+                &:nth-child(1) a .icon { background-position:-360px 0;}
+                &:nth-child(2) { width:125px; }
+                &:nth-child(3) a .icon { background-position:-120px 0;}
+                &:nth-child(4) a .icon { background-position:-300px 0;}
+                &:nth-child(5) a .icon { background-position:-180px 0;}
+                &:nth-child(6) a .icon { background-position:-960px 0;}
+                &:nth-child(7) a .icon { background-position:-780px 0;}
+                &:nth-child(8) a .icon { background-position:-840px 0;}
+                &:nth-child(9) a .icon { background-position:-1020px 0;}
+                &:nth-child(10) a .icon { background-position:-1080px 0;}
+                &:last-child a .icon{background-position:-600px 0;
+                } 
+            }
+            a{
+                display:block;
+                width:100%; height:100%;
+                font-size:15px; text-align:center;
+                .icon{
+                    display:block;
+                    width:60px; height:60px;
+                    margin:0 auto 10px;
+                    background-image: url('https://www.seoul.go.kr/res_newseoul/images/main/icon_set_service_2021.png?ver=210526');                  
+                    background-repeat: no-repeat;
+                }     
+            }
+        }
+        .btn{
+            display:block;
+            position:absolute; top:45px; right:0;
+            width:112px; height:29px;
+            float:right; border:1px solid #ddd;
+            line-height: 28px;
+            font-size:15px;
+            padding-left:13px;
+            box-sizing: border-box;
+            background: url('https://www.seoul.go.kr/res_newseoul/images/icon_link6.png') no-repeat right 13px top 50%;
+        }
+    }
+}
+.banner{
+    background: #eff4f8;
+    margin-top:35px;
+    .inner{
+        width:1152px; margin:0 auto;
+        display:table;
+        a{
+            display:table-cell;
+            width:288px; padding:20px 0;
+            box-sizing: border-box;
+            position:relative;
+            img{ display:block; width:100%; height:70px; }
+            &::before{
+                content:''; position:absolute;
+                top:30px; left:0;
+                width:1px; height:60px;
+                background:#dbdbdb;
+            }
+            &:first-child::before{
+                background:transparent;
+            }
+        }
+    }
+}
+.borad{
+    width:1152px; margin:0 auto;
+    .inner{
+        padding:50px 0 50px;
+        border-bottom: 2px solid #222222;
+
+        @include clear;
+        &>div{
+            float:left; width:360px;
+            h2{
+                font-size:22px;
+                font-weight: bold;
+                margin-bottom:10px;
+                padding-bottom:10px;
+                border-bottom:2px solid #dbdbdb;
+            }
+        }
+        .board{
+            position:relative;
+            &>ul li{
+                width: 100%;
+                position: relative;
+                padding: 6px 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                box-sizing: border-box;
+                line-height: 1.35em;
+
+                em{
+                    margin:0 9px 0 0;
+                    font-size:15px;
+                }
+                a{
+                    font-size:15px;
+                }
+            }
+            .eco{ color: #069363; }
+            .env{ color: #599100; }
+            .pub{ color: #028ab6; }
+            .cul{ color: #9b64d3; }
+            
+        }
+        .list2{
+            margin:0 36px;
+
+        }
+        .more_btn{
+            display:block;
+            position:absolute; top:0; right:0;
+            width:22px; height:20px;
+            border:1px solid #ddd;
+            text-align: center;
+            i{
+                line-height: 20px;
+                color:#444;
+                font-size:12px;
+            }
+        }
+        .board_service{
+            ul{
+                padding: 17px 5px 7px 20px;
+                background: #eff4f8;
+                @include clear;
+                li{
+                    float:left; width:50%;
+                    position:relative;
+                    padding:0 0 10px 10px;
+                    box-sizing: border-box;
+                    a{
+                        display:block;
+                        width:94%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        font-size: 15px;
+                        color: #333;
+                    }
+                    &::before{
+                        content:''; position:absolute;
+                        background:#666;
+                        width:2px; height:2px;
+                        top:50%; left:0;
+                        margin-top:-6px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.info{
+    width:1152px; margin:0 auto;
+    .inner{
+        height:145px; padding-top:40px;
+    }
+    h2{
+        padding-bottom:20px;
+        font-size:24px;
+        font-weight: bold;
+    }
+    ul{
+        padding:0 27px;
+        text-align: center;
+        @include clear;
+
+        li{
+            float:left;
+            width:85px; height:145px;
+            margin-left:59px;
+            a{
+                display:block;
+                width:100%; height:100%;
+                font-size:16px;
+                padding-top:100px;
+                box-sizing: border-box;
+            }
+            &:nth-child(1){
+                background: url('https://www.seoul.go.kr/res_newseoul/images/icon_house.png') no-repeat;
+                margin-left:0;
+            }
+            &:nth-child(2){
+                background: url('https://www.seoul.go.kr/res_newseoul/images/icon_economy.png') no-repeat;
+            }
+            &:nth-child(3){
+                background: url('https://www.seoul.go.kr/res_newseoul/images/icon_traffic.png') no-repeat;
+            }
+            &:nth-child(4){
+                background: url('https://www.seoul.go.kr/res_newseoul/images/icon_environment.png') no-repeat;
+            }
+            &:nth-child(5){
+                background: url('https://www.seoul.go.kr/res_newseoul/images/icon_welfare.png') no-repeat;
+            }
+            &:nth-child(6){
+                background: url('https://www.seoul.go.kr/res_newseoul/images/icon_safty.png') no-repeat;
+            }
+            &:nth-child(7){
+                background: url('https://www.seoul.go.kr/res_newseoul/images/icon_culture.png') no-repeat;
+            }
+            &:nth-child(8){
+                background: url('https://www.seoul.go.kr/res_newseoul/images/icon_work.png') no-repeat;
+            }
+        }
+        
+    }
+}
+.issue{
+    width:1152px; margin:0 auto;
+    .inner{
+        padding: 20px 0 30px;
+        position:relative;
+        clear:both;
+    }
+    h2{
+        font-size:24px;
+        font-weight: bold;
+        padding-bottom:20px;
+    }
+    .wrap{
+        @include clear;
+        article{
+            float:left;
+            width:273px;
+            margin-left:20px;
+            position:relative;
+            &:hover:not(:last-child){
+                a .pic img{
+                    transform:scale(1.1);
+                }
+            }
+            &:nth-of-type(1),&:nth-of-type(5){
+                margin-left:0;
+            }
+            h3{
+                position:absolute;
+                top:156px; left:0;
+                width:82px; height:32px;
+                color:#fff; text-align: center;
+                line-height: 32px;
+                z-index:1;
+            }
+            .env{ background: #599100; }
+            .tra{ background: #337ee2; }
+            .pub{ background: #028ab6; }
+            .eco{ background: #069363; }
+            .cul{ background: #d76000; }
+            a{
+                display:block; width:100%;
+                .pic{
+                    width:100%; height:188px;
+                    overflow:hidden;
+                    margin-bottom:15px;
+                    img{
+                        width:auto; height:100%;
+                        transform:scale(1.0);
+                        transition:transform 0.3s;
+                    }
+                }
+                .txt{
+                    width:100%;
+                    font-size:16px;
+                    line-height: 1.5em;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: normal;
+                    word-wrap: normal;
+                    word-break: keep-all;
+                }
+            }
+            &:last-child a .pic{
+                height:248px;
+                img{ height:100%; }
+            }
+        }
+    }
+}
+.notice{
+    width:1152px; margin:0 auto;
+    .inner{
+        padding-bottom:50px;
+        border-bottom: 2px solid #222222;
+        @include clear;
+
+        h2{
+            font-size:24px;
+            font-weight: bold;
+            padding-bottom:10px;
+        }
+    }
+    
+    .board1{
+        float:left; 
+        a{
+            display:block;
+            width:280px; height:152px;
+            overflow: hidden;
+            position:relative;
+            .pic{
+                width:100%; height:100%; 
+                img{ width:100%; height:100%; object-fit: cover; }
+            }
+            .txt{
+                position:absolute;
+                left:0; bottom:0; z-index:1;
+                background:rgba(0,0,0,.5);
+                font-size:16px;
+                width:100%;
+                padding:10px 20px;
+                box-sizing: border-box;
+                color:#fff;
+                white-space: nowrap;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                vertical-align: middle;
+            }
+        }
+    }
+    .board2{
+        float:left; width:480px;
+        margin-left:20px;
+        ul{
+            li{
+                width:100%;
+                padding:10px 0;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                box-sizing: border-box;
+            }
+            a{
+                font-size:16px; color:#555;
+            }
+            span{
+                font-weight: 400;
+                color:#09ac43;
+                margin-right:18px;
+            }
+        }
+    }
+    .board3{
+        float:left;
+        width:350px; height:195px;
+        margin-left:22px;
+        background: url('https://www.seoul.go.kr/res_newseoul/images/main/bg_sns_list.jpg?ver=20191204') no-repeat 0 0;
+        position:relative;
+        a{
+            display:block;
+            width:100%; height:100%;
+            padding:12px 15px;
+            box-sizing: border-box;
+            p{
+                display:inline-block;
+                font-size:22px;
+                font-weight: bold;
+            }
+        }
+        ul{
+            width:276px; height:40px;
+            position:absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-25%);
+            @include clear;
+            li{
+                float:left;
+                margin:0 3px;
+                a{
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    background: url('https://www.seoul.go.kr/res_newseoul/images/main/ico_sns_list_2021.png?ver=20210401') no-repeat 0 0;
+                }
+                &:nth-of-type(1) a{
+                    background-position: 0 0;
+                }
+                &:nth-of-type(2) a{
+                    background-position: -40px 0;
+                }
+                &:nth-of-type(3) a{
+                    background-position: -80px 0;
+                }
+                &:nth-of-type(4) a{
+                    background-position: -120px 0;
+                }
+                &:nth-of-type(5) a{
+                    background-position: -160px 0;
+                }
+                &:nth-of-type(6) a{
+                    background-position: -200px 0;
+                }
+            }
+            
+            
+        }
+    }
+}
+.slide_banner{
+    width:1152px; margin:0 auto;
+    .inner{
+        position: relative;
+        padding:50px 0;
+    }
+    .swiper-wrapper{
+        height:122px;
+        position:relative;
+    }
+    
+    .swiper-slide{
+        width:auto; height:auto;
+        a{display:block; }
+    }
+    
+    .isu_control{
+        display:block;
+        position:relative;
+        height:32px;
+        margin-top:5px;
+        .isu_count{
+            display:block; width:auto;
+            position:absolute; right:80px; top:50%;
+            transform:translateY(-50%);
+            left:auto; bottom:auto;
+        }
+        ul{
+            position: absolute;
+            display: block;
+            right: 0; top: 50%;
+            transform: translateY(-50%);
+            overflow: hidden;
+            @include clear;
+            &>li{
+                float:left; width:20px; height:20px;
+                border:1px solid #999; overflow: hidden;
+                position:relative;
+                &>a{
+                    display:inline-block;
+                }
+                .isu_prev{
+                    background: url('https://www.seoul.go.kr/res_newseoul/images/icon_set_common.png') no-repeat -44px -31px;
+                    left: 0%;
+                }
+                .isu_btn.on{
+                    display:block;
+                }
+                .isu_next{
+                    background: url('https://www.seoul.go.kr/res_newseoul/images/icon_set_common.png') no-repeat -78px -31px;
+                    right: 0%;
+                }
+                .isu_play{
+                    display:none; width:20px; height:20px;
+                    background: url('https://www.seoul.go.kr/res_newseoul/images/icon_set_common.png') no-repeat -100px -43px;
+                }
+                .isu_pause{
+                    display:none; width:20px; height:20px;
+                    background: url('https://www.seoul.go.kr/res_newseoul/images/icon_set_common.png') no-repeat -64px -43px;
+                }
+            }
+            
+            
+        }
+        .swiper-button-prev::after,.swiper-button-next::after{
+            display:none;
+        }
+        .isu_prev{
+            background:url('https://www.seoul.go.kr/res_newseoul/images/icon_set_common.png') no-repeat -45px -43px;
+        }
+        
+    }
+}
+
+.site{
+    width:1152px; margin:0 auto;
+    .inner{
+        margin-bottom:20px;
+        position:relative;
+    }
+    .menu{
+        border-top:1px solid #d0d0d0;
+        border-bottom:1px solid #d0d0d0;
+        // overflow:hidden;
+        @include clear;
+
+        &>li{
+            float:left;
+            // overflow:hidden;
+            width:33.333%;
+            &.on{
+                &>a{ background:#ddd; }
+                span{
+                    &::after{
+                        top:2px;
+                        transform: rotate(45deg);
+                        transform-origin: center center;
+                    }
+                }
+            }
+
+            &>a{
+                display:inline-block;
+                width:100%;
+                padding:16px 0;
+                border-left:1px solid #d0d0d0;
+                background:#f7f7f7;
+                text-align:center;
+                position:relative;
+                box-sizing: border-box;
+            }
+            &:last-child>a{ 
+                border-right:1px solid #d0d0d0;
+            }
+            
+            span{
+                display:inline-block;
+                position:relative;
+                font-size:14px;
+                padding-right:20px;
+                box-sizing: border-box;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    right: 0px;
+                    height: 7px;
+                    width: 7px;
+                    border-style: solid;
+                    border-color: #373737;
+                    border-width: 0px 2px 2px 0px;
+                    transform: rotate(-135deg);
+                    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    transform-origin: center center;
+                }
+            }
+            .sub_menu{
+                display:none;
+                position:absolute; left:0; bottom:47px;
+                width:100%; padding:10px 20px 20px;
+                background:#fff;
+                border:1px solid #d0d0d0;
+                box-sizing: border-box;
+                z-index:10;
+                @include clear;
+                &>li{
+                    float:left; width:25%;
+                    margin-top:10px;
+                    &>a{
+                        color:#555;
+                        line-height: 1.35em;
+                    }
+                }
+            }
+        }
+    }
+   
+}

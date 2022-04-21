@@ -1,0 +1,93 @@
+body { font-family: "Noto Sans KR", sans-serif; letter-spacing: -0.025em; }
+
+body .sc_title { display: block; padding-bottom: 66px; font-family: "Titillium Web", "Noto Sans", sans-serif; font-size: 55px; font-weight: 300; line-height: 1.25; text-align: center; color: #222; }
+
+.header { width: 100%; height: 90px; position: fixed; top: 20px; left: 0; padding: 0 90px; z-index: 10; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.header::before { content: ''; display: block; position: absolute; left: 90px; right: 90px; bottom: 0; top: 0; background: #fff; -webkit-transition: all 300ms; transition: all 300ms; }
+
+.header.on { top: 0; height: 75px; }
+
+.header.on::before { left: 0; right: 0; }
+
+.header.on #gnb > li > a { padding: 22.5px 32.5px; }
+
+.header.on .lang { top: 28px; }
+
+.header.on .search_btn { top: 30px; }
+
+.header.on.navi-up { top: -75px; }
+
+.header .inner { height: 100%; margin: 0 auto; position: relative; }
+
+.header .inner .menu_bg { content: ''; position: absolute; width: 100%; height: 290px; background: #111111; top: 100%; left: 0; display: none; }
+
+.header .wrap { height: 100%; padding: 0 20px; background-color: #fff; position: relative; }
+
+.header h1 { width: 122px; height: 30px; position: absolute; top: 50%; left: 50px; -webkit-transform: translateY(-50%); transform: translateY(-50%); background: url(../img/logo.png) center/100% no-repeat; }
+
+.header h1 a { display: block; height: 100%; }
+
+.header .menu { width: 100%; height: 100%; position: relative; text-align: center; }
+
+.header .menu > ul { display: inline-block; height: 100%; }
+
+.header .menu > ul:after { content: ''; display: block; clear: both; }
+
+.header .menu > ul > li { float: left; height: 100%; position: relative; }
+
+.header .menu > ul > li:hover > a { color: #0890c0; }
+
+.header .menu > ul > li > a { display: block; height: 100%; padding: 30px 32.5px; font-family: "Noto Sans", sans-serif; font-size: 18px; line-height: 1.7; font-weight: 600; color: #222; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.header .menu .depth1 { width: 100%; height: 290px; position: absolute; top: 100%; padding-top: 20px; -webkit-box-sizing: border-box; box-sizing: border-box; display: none; }
+
+.header .menu .depth1 > li:hover a { color: #fff; }
+
+.header .menu .depth1 > li > a { display: block; padding: 6px 15px; font-size: 16px; font-weight: 400; text-align: center; color: #888; line-height: 1.7; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.header .lang { position: absolute; right: 100px; top: 35.5px; }
+
+.header .lang > a { display: inline-block; padding: 0 10.5px; position: relative; font-family: "Noto Sans", sans-serif; font-size: 12px; font-weight: 600; border-right: 1px solid #c7c7c7; }
+
+.header .lang > .active { color: #1c9ad6; }
+
+.header .lang > a:last-child { border-right: none; }
+
+.header .search_btn { position: absolute; top: 38px; right: 70px; }
+
+.header .search_btn > a { display: block; font-size: 18px; color: #222; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.header .search_btn > a:hover { color: #1c9ad6; }
+
+.footer { width: 100%; padding: 58px 0 110px; position: relative; background: #333; }
+
+.footer .inner { max-width: 1200px; margin: 0 auto; position: relative; }
+
+.footer .footer_nav { padding-bottom: 26px; margin-bottom: 35px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+
+.footer .footer_nav ul:after { content: ''; display: block; clear: both; }
+
+.footer .footer_nav ul li { float: left; }
+
+.footer .footer_nav ul li a { display: block; margin-right: 20px; font: 15px/1 "Noto Sans", sans-serif; color: #aaa; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.footer .footer_nav ul li a:hover { color: #fff; }
+
+.footer .footer_info { position: relative; }
+
+.footer .footer_info .family_link { position: absolute; top: 4px; right: 0px; text-align: right; }
+
+.footer .footer_info .family_link a { display: block; width: auto; margin-bottom: 20px; }
+
+.footer .footer_info .family_link a img { display: inline-block; width: 100%; vertical-align: middle; }
+
+.footer .footer_info .family_link a .family_link_pic { width: auto; height: 30px; }
+
+.footer .footer_info p { padding-bottom: 9px; font-size: 0; line-height: 1; }
+
+.footer .footer_info p span { display: inline-block; padding-right: 12px; position: relative; vertical-align: middle; line-height: 1.6; font-size: 13px; color: #9a9a9a; font-family: "Noto Sans KR", sans-serif; }
+
+.footer .footer_info .copyright { padding-top: 20px; padding-bottom: 0; letter-spacing: 0.015em; }
+
+.footer .footer_info .copyright span { display: inline-block; font-family: "Titillium Web", "Noto Sans", sans-serif; line-height: 1.6; font-size: 13px; color: #9a9a9a; }

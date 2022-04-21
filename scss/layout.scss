@@ -1,0 +1,65 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+KR:wght@100;300;400;500;700&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+@import url('./reset.css');
+@import url('./common.css');
+
+body{
+    font-family: $font-kr;
+    font-size: 16px;
+    letter-spacing: -0.025em;
+    min-width: 1200px;
+    color: #fff;
+    cursor: url(https://studio-jt.co.kr/wp-content/themes/studio_jt/css/../images/layout/cursor-pointer.png),auto;
+}
+
+.particle{
+    width:100px; height:100px;
+    pointer-events: none;
+    position:fixed; top:0; left:0;
+    z-index:10;
+    &:nth-child(3n - 2){background:url(../images/particle1.png) center 100% no-repeat;}
+    &:nth-child(3n - 1){background:url(../images/particle2.png) center 100% no-repeat;}
+    &:nth-child(3n){background:url(../images/particle3.png) center 100% no-repeat; }
+}
+
+
+.header{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    padding: 20px 30px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-family: $font-en1;
+    align-items: center;
+    z-index:10;
+    .logo{
+        width:180px; height:50px;
+        background:url('../images/logo.png') center/100% no-repeat;
+  
+        a{display: block;height: 100%;}
+    }
+    // .navbar{
+    //     .nav{display: flex;}
+    //     li{
+    //        &+li{margin-left: 30px;} 
+    //         a{
+    //             font-size: 14px;
+    //             font-weight: 500;
+    //         }
+    //     }
+    // }
+}
+
+
+.footer{
+    font-family: $font-en1;
+    line-height: 1.5;
+.copyright{
+position: fixed;
+bottom: 0;left: 0;
+padding: 20px;
+font-size: 12px;
+color: #818181;
+}
+}

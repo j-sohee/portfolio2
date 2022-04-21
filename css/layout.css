@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+KR:wght@100;300;400;500;700&family=Poppins:wght@100;300;400;500;600;700&display=swap");
+@import url("./reset.css");
+@import url("./common.css");
+body { font-family: "Noto Sans KR", sans-serif; font-size: 16px; letter-spacing: -0.025em; min-width: 1200px; color: #fff; cursor: url(https://studio-jt.co.kr/wp-content/themes/studio_jt/css/../images/layout/cursor-pointer.png), auto; }
+
+.particle { width: 100px; height: 100px; pointer-events: none; position: fixed; top: 0; left: 0; z-index: 10; }
+
+.particle:nth-child(3n - 2) { background: url(../images/particle1.png) center 100% no-repeat; }
+
+.particle:nth-child(3n - 1) { background: url(../images/particle2.png) center 100% no-repeat; }
+
+.particle:nth-child(3n) { background: url(../images/particle3.png) center 100% no-repeat; }
+
+.header { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; position: fixed; padding: 20px 30px; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "Montserrat", "Noto Sans KR", sans-serif; -webkit-box-align: center; -ms-flex-align: center; align-items: center; z-index: 10; }
+
+.header .logo { width: 180px; height: 50px; background: url("../images/logo.png") center/100% no-repeat; }
+
+.header .logo a { display: block; height: 100%; }
+
+.footer { font-family: "Montserrat", "Noto Sans KR", sans-serif; line-height: 1.5; }
+
+.footer .copyright { position: fixed; bottom: 0; left: 0; padding: 20px; font-size: 12px; color: #818181; }
