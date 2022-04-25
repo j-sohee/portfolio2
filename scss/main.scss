@@ -108,9 +108,8 @@
     }
     .cont{
         position:relative;
-        // width:25vw;
+        width:25vw;
         box-sizing: border-box;
-        width:calc(min(25vw, 1024px));
         border-right:1px solid #ddd;
         position:relative;
         &::after{

@@ -42,11 +42,11 @@
 
 @media (max-width: 768px) { .sc_works { -ms-flex-wrap: wrap; flex-wrap: wrap; } }
 
-.sc_works .cont { position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; width: calc(min(25vw, 1024px)); border-right: 1px solid #ddd; position: relative; }
+.sc_works .cont { position: relative; width: 25vw; -webkit-box-sizing: border-box; box-sizing: border-box; border-right: 1px solid #ddd; position: relative; }
 
 .sc_works .cont::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.2); }
 
-@media (max-width: 1480px) { .sc_works .cont { width: 25vw; } }
+@media (max-width: 1380px) { .sc_works .cont { width: 25vw; } }
 
 @media (max-width: 1024px) { .sc_works .cont { width: 50%; } }
 

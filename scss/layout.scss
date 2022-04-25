@@ -11,7 +11,7 @@ body{
     min-width: 1200px;
     color: #fff;
     cursor: url(https://studio-jt.co.kr/wp-content/themes/studio_jt/css/../images/layout/cursor-pointer.png),auto;
-    @include desktop1{ min-width: auto;  }
+    @include desktop1{  min-width:auto;  }
     @include tablet{ min-width:auto; }
     @include mobile{ min-width:auto; }
 }

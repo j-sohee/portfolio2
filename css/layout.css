@@ -3,7 +3,7 @@
 @import url("./common.css");
 body { font-family: "Noto Sans KR", sans-serif; font-size: 16px; letter-spacing: -0.025em; min-width: 1200px; color: #fff; cursor: url(https://studio-jt.co.kr/wp-content/themes/studio_jt/css/../images/layout/cursor-pointer.png), auto; }
 
-@media (max-width: 1480px) { body { min-width: auto; } }
+@media (max-width: 1380px) { body { min-width: auto; } }
 
 @media (max-width: 1024px) { body { min-width: auto; } }
 
