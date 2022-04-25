@@ -1,5 +1,6 @@
 $(function() {
 
+    ScrollTrigger.saveStyles(".container");
     const secCnt = $('.section').length*100 - 100;
     gsap.to('.wrap',{
         scrollTrigger:{
