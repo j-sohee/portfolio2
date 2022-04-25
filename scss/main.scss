@@ -13,6 +13,7 @@
     flex: 1 0 100vw;
     overflow: hidden;
     box-sizing: border-box;
+
 }
 
 .sc_intro{
@@ -50,6 +51,7 @@
             font-size: 18px;
             font-weight: 300;
             opacity: 0.5;
+            @include mobile{ font-size:12px; }
         }
     }
 }
@@ -61,21 +63,12 @@
     justify-content: center;
     padding: 0 15%;
     position: relative;
-    background: #e8d8cf; //#16131a;
-    color: #fff; //#d2fc50;
-    // &::before{
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;left: 0;
-    //     right: 0;bottom: 0;
-    //     background: rgba(255,255,255,0.6);
-    //     backdrop-filter: blur(20px);
-    //     z-index: 3;
-    // }
+    background: #e8d8cf;
+    color: #fff;
+
     .circle01{position: absolute;}
     .circle02{position: absolute;}
 
-    // background: rgba();
     .txt_wrap{
         z-index: 5;
     }
@@ -89,19 +82,50 @@
     .desc{
         font-size: 22px;
         line-height: 1.4;
-        // max-width: 50%;
         color: #fff;
         word-break: keep-all;
+    }
+
+    @include mobile{
+        padding:0 8%;
+        .sc_title{
+            font-size:6vw;
+        }
+        .desc{
+            font-size:16px;
+        }
     }
 
 }
 
 .sc_works{
     display:flex;
+    @include tablet{
+        flex-wrap:wrap;
+    }
+    @include mobile{
+        flex-wrap:wrap;
+    }
     .cont{
         position:relative;
-        width:calc(min(25vw, 1200px));
+        // width:25vw;
+        box-sizing: border-box;
+        width:calc(min(25vw, 1024px));
         border-right:1px solid #ddd;
+        position:relative;
+        &::after{
+            content:'';
+            position:absolute; top:0; left:0;
+            width:100%; height:100%; 
+            background-color:rgba(0,0,0,.2);
+        }
+        @include desktop1{ width:25vw; }
+        @include tablet{
+            width:50%;
+        }
+        @include mobile{
+            width:50%;
+        }
         img{
             width:100%;
             height:100%;
@@ -140,6 +164,8 @@
             letter-spacing: -0.08em;
             text-align:center;
             margin-bottom:20px;
+            word-break: keep-all;
+            line-height: 1.2;
         }
         .link{
             text-align: center;
@@ -152,6 +178,22 @@
                 font-size:12px;
                 margin-right:5px;
                 transition: 0.5s;
+            }
+        }
+        @include tablet{
+            .tit{ font-size:28px; }
+        }
+        @include mobile{
+            span{ font-size:12px; }
+            .tit { font-size:22px; }
+            .link{
+                a{
+                    display:block;
+                    margin:0 auto;
+                    margin-top:10px;
+                    font-size:12px;
+                    height:25px; line-height: 25px;
+                }
             }
         }
     }
