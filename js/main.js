@@ -1,6 +1,7 @@
 $(function() {
 
     const secCnt = $('.section').length*100 - 100;
+    console.log(secCnt);
     gsap.to('.wrap',{
         scrollTrigger:{
             trigger:".container",

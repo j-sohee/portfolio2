@@ -5,10 +5,6 @@ body { font-family: "Noto Sans KR", sans-serif; font-size: 16px; letter-spacing:
 
 @media (max-width: 1380px) { body { min-width: auto; } }
 
-@media (max-width: 1024px) { body { min-width: auto; } }
-
-@media (max-width: 768px) { body { min-width: auto; } }
-
 .particle { width: 100px; height: 100px; pointer-events: none; position: fixed; top: 0; left: 0; z-index: 10; }
 
 .particle:nth-child(3n - 2) { background: url(../images/particle1.png) center 100% no-repeat; }
